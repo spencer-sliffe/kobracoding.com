@@ -21,11 +21,13 @@
             <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
             <div class="w3-center">
                 <h1 class="w3-xxxlarge w3-animate-bottom">Kobra Coding</h1>
-                <h4>Solution Development  |  Website Management</h4>
+                <h4>Development | Management</h4>
                 <div class="w3-padding-32">
                     <div class="w3-bar w3-theme">
                         <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Services')">Services</button>
-                        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Opportunities')">Opportunites</button>
+                        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Opportunities')">Join</button>
+						<button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Gallery')">Gallery</button>
+             		    <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'About')">About</button>
                     </div>
                     <!--<button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Apply to Join</button>	 --> 
                 </div>
@@ -37,8 +39,8 @@
                 <span onclick="document.getElementById('id01').style.display='none'"
                     class="w3-button w3-display-topright">×</span>
                 <div class="w3-row-padding">
-                    <form class="w3-container w3-card-4">
-                        <h2>Apply to join Kobra Coding</h2>
+                    <form class="w3-container w3-card-4" action="submit_1.php" id="form" method="post" name="form">
+                        <h2 class="w3-center">Apply to join Kobra Coding</h2>
                         <div class="w3-section">      
                             <input class="w3-input" type="text" name="o_name" required>
                             <label>Name</label>
@@ -48,44 +50,44 @@
                             <label>Email</label>
                         </div>
                         <div class="w3-section">      
-                            <input class="w3-input" type="text" required>
+                            <input class="w3-input" type="text" name="p_experience" required>
                             <label>Experience</label>
                         </div>
                         <hr>
                         <div class="w3-row">
                             <div class="w3-third">
-                                <input id="coder" class="w3-check" type="checkbox">
+                                <input class="w3-radio" type="radio" name="position" value="coding" required>
                                 <label>Coder</label>
                                 <br>
-                                <input id="designer" class="w3-check" type="checkbox">
+                                <input class="w3-radio" type="radio" name="position" value="designer">
                                 <label>Designer</label>
                                 <br>
-                                <input id="creative" class="w3-check" type="checkbox">
+                                <input class="w3-radio" type="radio" name="position" value="entrepenuer">
                                 <label>Entrepenuer</label>
                                 <br><br>
                             </div>
                             <div class="w3-third">
-                                <input id="male" class="w3-radio" type="radio" name="gender" value="male" required>
+                                <input class="w3-radio" type="radio" name="gender" value="male" required>
                                 <label>Male</label>
                                 <br>
-                                <input id="female" class="w3-radio" type="radio" name="gender" value="female">
+                                <input class="w3-radio" type="radio" name="gender" value="female">
                                 <label>Female</label><br><br>
                             </div>
                             <div class="w3-third">
-                                <input id="young" class="w3-radio" type="radio" name="age" value="young" required>
+                                <input class="w3-radio" type="radio" name="age" value="young" required>
                                 <label>18 - 30</label>
                                 <br>
-                                <input id="old" class="w3-radio" type="radio" name="age" value="old">
+                                <input class="w3-radio" type="radio" name="age" value="old">
                                 <label>31 +</label><br><br>
                             </div>
                         </div>
                         <hr>
-						<div class="w3-row w3-center" >
-                        	<input class="w3-button w3-hover-light-grey" type="submit" value="Submit">
-						</div>
+                        <input type="submit" class="w3-button w3-hover-light-grey" >
+						<br>
+						<br>
                     </form>
+					<h3><?php include "submit_1.php"?></h3>
                 </div>
-                <hr>
             </div>
         </div>
         <div id="id02" class="w3-modal">
@@ -94,8 +96,8 @@
                 <span onclick="document.getElementById('id02').style.display='none'"
                     class="w3-button w3-display-topright">×</span>
                 <div class="w3-row-padding">
-                    <form class="w3-container w3-card-4" method="POST" action="submit.php">
-                        <h2>Application for Kobra Coding's Services:</h2>
+                    <form class="w3-container w3-card-4" action="submit.php" id="form" method="post" name="form">
+                        <h2 class="w3-center">Application for Kobra Coding's Services</h2>
                         <div class="w3-section">      
                             <input class="w3-input" type="text" name="s_name" id="s_name"  required>
                             <label for="s_name">Name</label>
@@ -111,32 +113,35 @@
                         <hr>
                         <div class="w3-row">
                             <div class="w3-half">
-                                <input id="business" class="w3-radio" type="radio" name="siteType" value="business" required>
+                                <input id="business" class="w3-radio" type="radio" name="siteType" value="Business" required>
                                 <label>Business</label>
                                 <br>
-                                <input id="personal" class="w3-radio" type="radio" name="siteType" value="personal">
-                                <label>Personal</label><br><br>
+                                <input id="personal" class="w3-radio" type="radio" name="siteType" value="Personal">
+                                <label>Personal</label>
+								<br><br>
                             </div>						
                             <div class="w3-half">
-                                <input id="design" class="w3-radio" type="radio" name="needs" value="design" required>
+                                <input class="w3-radio" type="radio" name="needs" value="Design" required>
                                 <label>Design</label>
                                 <br>
-                                <input id="development" class="w3-radio" type="radio" name="needs" value="development">
+                                <input class="w3-radio" type="radio" name="needs" value="Development">
                                 <label>Development</label>
                                 <br>
-                                <input id="management" class="w3-radio" type="radio" name="needs" value="management">
-                                <label>Management</label><br>
-                                <input id="all" class="w3-radio" type="radio" name="needs" value="all">
-                                <label>All</label><br><br>
+                                <input class="w3-radio" type="radio" name="needs" value="Management">
+                                <label>Management</label>
+								<br>
+                                <input class="w3-radio" type="radio" name="needs" value="All">
+                                <label>All</label>
+								<br><br>
                             </div>
                         </div>
                         <hr>
-						<div class="w3-row w3-center" >
-                       		<input class="w3-button w3-hover-light-grey" type="submit" value="Submit">
-						</div>
+                       	<input name="submit" type="submit" class="w3-button w3-hover-light-grey" >
+						<br>
+						<br>
                     </form>
+					<h3><?php include "submit.php"?></h3>
                 </div>
-                <hr>
             </div>
         </div>
         <div id="Services" class="w3-container side w3-animate-opacity">
@@ -237,6 +242,81 @@
             </div>
             <hr>
         </div>
+        <div id="Gallery" class="w3-container side w3-animate-opacity">
+            <div class="w3-center">
+                <h1 class="w3-xxlarge w3-animate-bottom">Kobra Coding App in Progress</h1>
+			</div>
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:460px">
+						<img class="w3-image" src="Resources/Images/App_1.png">
+                    </div>
+                </div>
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                   		<img class="w3-image" src="Resources/Images/App_2.png">
+                    </div>
+                </div>
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <img class="w3-image" src="Resources/Images/App_4.png">
+                    </div>
+                </div>
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <img class="w3-image" src="Resources/Images/App_5.png">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="w3-center">
+                <div class="w3-padding-32">
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Apply to Join</button>
+                    </div>
+                    <!--	 --> 
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="About" class="w3-container side w3-animate-opacity">
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <div class="w3-half">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <h3>Background</h3>
+                        <br>
+                        <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                        <p>Managed by University of Kansas Computer Science Students</p>
+                        <p>Educated in Software Engineering</p>
+                        <p>7+ Years Coding Experience</p>
+						<p>Project Inspired</p>
+						<p>Expanding and Sharpening Skillsets</p>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <h3>Future</h3>
+                        <br>
+                        <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                        <p>Building Portfol</p>
+                        <p>App for Kobra Coding Coming in 2023</p>
+                        <p>Game Development</p>
+                        <p>Continue to Provide Website Services</p>
+                        <p>Expand and Collaborate with Others of Like Mind</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="w3-center">
+                <div class="w3-padding-32">
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Apply to Join</button>
+                    </div>
+                    <!--	 --> 
+                </div>
+            </div>
+            <hr>
+        </div>
         <!-- Footer -->
         <footer class="w3-container w3-theme-dark w3-padding-16">
             <p>Coded by <a href="https://kobracoding.com" target="_blank">kobracoding</a></p>
@@ -245,7 +325,7 @@
                 <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
                 <i class="fa fa-chevron-circle-up"></i></span></a>
             </div>
-            <p>Email us   <a href="mailto:spenceronw@ku.edu" class="w3-btn w3-theme-light" target="_blank">HERE</a></p>
+            <p>Email us   <a href="mailto:spencer@kobra.com" class="w3-btn w3-theme-light" target="_blank">HERE</a></p>
         </footer>
         <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
         <script>
