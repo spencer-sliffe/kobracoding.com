@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kobra Coding</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="color.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style2.css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Side Navigation -->
+        <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+            <h1 class="w3-xxxlarge w3-text-theme">Creators</h1>
+            <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+            <a href="https://people.eecs.ku.edu/~s106s751/profilepage/profilepage.html" class="w3-bar-item w3-button">Spencer Sliffe</a>
+        </nav>
+        <!-- Header -->
+        <header class="w3-container w3-theme w3-padding" id="myHeader">
+            <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+            <div class="w3-center">
+                <h1 class="w3-xxxlarge w3-animate-bottom">Help Me Help You</h1>
+                <h4>Give Help | Receive Help</h4>
+                <div class="w3-padding-32">
+                    <div class="w3-bar w3-theme">
+						<button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Opportunities')">Homepage</button>
+                        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Services')">Services</button>           						<button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Gallery')">Images</button>
+             		    <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'About')">Videos</button>
+						<button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Help')">Help</button>
+                    </div>
+                    <!--<button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Apply to Join</button>	 --> 
+                </div>
+            </div>
+        </header>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-display-topright">×</span>
+                <div class="w3-row-padding">
+                    <form class="w3-container w3-card-4" action="submit_1.php" id="form" method="post" name="form">
+                        <h2 class="w3-center">Apply for HMHY's Services</h2>
+                        <div class="w3-section">      
+                            <input class="w3-input" type="text" name="o_name" required>
+                            <label>Name</label>
+                        </div>
+                        <div class="w3-section">      
+                            <input class="w3-input" type="email" name="o_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="w3-section">      
+                            <input class="w3-input" type="text" name="p_experience" required>
+                            <label>Needs / Means</label>
+                        </div>
+                        <hr>
+                        <div class="w3-row">
+                            <div class="w3-third">
+                                <input class="w3-radio" type="radio" name="position" value="coding" required>
+                                <label>Offer Help</label>
+                                <br>
+                                <input class="w3-radio" type="radio" name="position" value="designer">
+                                <label>Receive Help</label>
+                                <br><br>
+                            </div>
+                            <div class="w3-third">
+                                <input class="w3-radio" type="radio" name="gender" value="male" required>
+                                <label>Male</label>
+                                <br>
+                                <input class="w3-radio" type="radio" name="gender" value="female">
+                                <label>Female</label><br><br>
+                            </div>
+                            <div class="w3-third">
+                                <input class="w3-radio" type="radio" name="age" value="young" required>
+                                <label>18 - 30</label>
+                                <br>
+                                <input class="w3-radio" type="radio" name="age" value="old">
+                                <label>31 - 40</label><br>
+                                <input class="w3-radio" type="radio" name="age" value="old">
+                                <label>41 - 50</label><br>
+                                <input class="w3-radio" type="radio" name="age" value="old">
+                                <label>51 +</label><br><br>
+                            </div>
+                        </div>
+                        <hr>
+                        <input type="submit" class="w3-button w3-hover-light-grey" >
+						<br>
+						<br>
+                    </form>
+					<h3><?php include "submit_1.php"?></h3>
+                </div>
+            </div>
+        </div>
+        <div id="id02" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+                <header class="w3-container w3-theme">
+                <span onclick="document.getElementById('id02').style.display='none'"
+                    class="w3-button w3-display-topright">×</span>
+                <div class="w3-row-padding">
+                    <form class="w3-container w3-card-4" action="submit.php" id="form" method="post" name="form">
+                        <h2 class="w3-center">Application for Kobra Coding's Services</h2>
+                        <div class="w3-section">      
+                            <input class="w3-input" type="text" name="s_name" id="s_name"  required>
+                            <label for="s_name">Name</label>
+                        </div>
+                        <div class="w3-section">      
+                            <input class="w3-input" type="email" name="s_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="w3-section">      
+                            <input class="w3-input" type="text" name="s_descript" required>
+                            <label>Brief Website Description</label>
+                        </div>
+                        <hr>
+                        <div class="w3-row">
+                            <div class="w3-half">
+                                <input id="business" class="w3-radio" type="radio" name="siteType" value="Business" required>
+                                <label>Business</label>
+                                <br>
+                                <input id="personal" class="w3-radio" type="radio" name="siteType" value="Personal">
+                                <label>Personal</label>
+								<br><br>
+                            </div>						
+                            <div class="w3-half">
+                                <input class="w3-radio" type="radio" name="needs" value="Design" required>
+                                <label>Design</label>
+                                <br>
+                                <input class="w3-radio" type="radio" name="needs" value="Development">
+                                <label>Development</label>
+                                <br>
+                                <input class="w3-radio" type="radio" name="needs" value="Management">
+                                <label>Management</label>
+								<br>
+                                <input class="w3-radio" type="radio" name="needs" value="All">
+                                <label>All</label>
+								<br><br>
+                            </div>
+                        </div>
+                        <hr>
+                       	<input name="submit" type="submit" class="w3-button w3-hover-light-grey" >
+						<br>
+						<br>
+                    </form>
+					<h3><?php include "submit.php"?></h3>
+                </div>
+            </div>
+        </div>
+        <div id="Services" class="w3-container side w3-animate-opacity">
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <div class="w3-half">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <h3>Give Help</h3>
+                        <br>
+                        
+                        <p>Opportunity to directly help an American living in poverty</p>
+                        <p>If you have the means to help you can sign up to help at the bottom of HMHY's page</p>
+                        <p>Your personal information is protected</p>
+						<p>All applications are reviewed</p>
+                        <p>Please go into detail in what ways you are willing to help in your application</p>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <h3>Receive Help</h3>
+                        <br>
+                        
+                        <p>Opportunity to receive direct help if you are living in poverty</p>
+                        <p>If you need help please sign up at the bottom of HMHY's page</p>
+                        <p>Your personal information is protected</p>
+						<p>All applications are reviewed</p>
+                        <p>Please go into detail in what ways you need help in your application</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="w3-center">
+                <div class="w3-padding-32">
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Sign Up!</button>
+                    </div>
+                    <!--	 --> 
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="Opportunities" class="w3-container side w3-animate-opacity">
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <div class="w3-half">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <h3>Poverty in the United States of America</h3>
+                        <br>
+                       
+                        <p>According to the Census, in 2020 over 37 million people lived in poverty</p>
+                        <p>Food insecurity and hunger are economic issues. The most common cause of food insecurity is a lower income</p>
+                        <p>11.4% of people in the United States experience poverty</p>
+                        <p>1 in 6 children lived in poverty in 2020</p>
+                        <p>Making ends meet with a lower income is more difficult if you are unemployed or employed in low-wage work, experience a financial emergency, have limited savings, and rent rather than own your home</p>
+						<p>Communities of color, especially Black communities, experience hunger, poverty, and unemployment at much higher rates than white 			people. This is because of long-standing racial injustice that leads to barriers in education, employment, housing, and more</p>
+						<p>*Source: United States Census Bureau*</p>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <h3>HMHY</h3>
+                        <br>
+                        <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+                        <p>Created to directly combat poverty in America</p>
+                        <p>Cuts out charities as a middle man</p>
+                        <p>Allows those in need to request direct help using our services</p>
+                        <p>Safe to use</p>
+                        <p>Does not store any personal information</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="w3-center">
+                <div class="w3-padding-32">
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Sign Up!</button>
+                    </div>
+                    <!--	 --> 
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="Gallery" class="w3-container side w3-animate-opacity">
+            <div class="w3-center">
+                <h1 class="w3-xxlarge w3-animate-bottom">Images of Poverty in America</h1>
+			</div>
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:460px">
+						<img class="w3-image" src="Resources/Images/img_1.png">
+                    </div>
+                </div>
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                   		<img class="w3-image" src="Resources/Images/img_2.png">
+                    </div>
+                </div>
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <img class="w3-image" src="Resources/Images/img_4.png">
+                    </div>
+                </div>
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:460px">
+                        <img class="w3-image" src="Resources/Images/img_5.png">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="w3-center">
+                <div class="w3-padding-32">
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Sign Up!</button>
+                    </div>
+                    <!--	 --> 
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="About" class="w3-container side w3-animate-opacity">
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <div class="w3-half">
+                    <iframe width="950" height="534" src="https://www.youtube.com/embed/NwDAaKJXKPE" title="Working & Homeless: The Death of the American Dream | Poverty in the USA Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="w3-half">
+<iframe width="950" height="534" src="https://www.youtube.com/embed/qAxQltlGodA" title="Growing Up Poor In America (full documentary) | FRONTLINE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br>
+                </div>
+            </div>
+            <hr>
+            <div class="w3-center">
+                <div class="w3-padding-32">
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Sign Up!</button>
+                    </div>
+                    <!--	 --> 
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="Help" class="w3-container side w3-animate-opacity">
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <p>Help feed coming here</p>
+            </div>
+            <hr>
+            <div class="w3-center">
+                <div class="w3-padding-32">
+                    <div class="w3-bar w3-theme">
+                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Sign Up!</button>
+                    </div>
+                    <!--	 --> 
+                </div>
+            </div>
+            <hr>
+        </div>
+        <!-- Footer -->
+        <footer class="w3-container w3-theme-dark w3-padding-16">
+            <p>Coded by <a href="https://kobracoding.com" target="_blank">kobracoding</a></p>
+            <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+                <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
+                <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+                <i class="fa fa-chevron-circle-up"></i></span></a>
+            </div>
+            <p>Email us   <a href="mailto:spencer@kobra.com" class="w3-btn w3-theme-light" target="_blank">HERE</a></p>
+        </footer>
+        <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+        <script>
+            // Side navigation
+            function w3_open() {
+              var x = document.getElementById("mySidebar");
+              x.style.width = "100%";
+              x.style.fontSize = "40px";
+              x.style.paddingTop = "10%";
+              x.style.display = "block";
+            }
+            function w3_close() {
+              document.getElementById("mySidebar").style.display = "none";
+            }
+            
+            // Tabs
+            function openSide(evt, name) {
+              var i;
+              var x = document.getElementsByClassName("side");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              var activebtn = document.getElementsByClassName("testbtn");
+              for (i = 0; i < x.length; i++) {
+                activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+              }
+              document.getElementById(name).style.display = "block";
+              evt.currentTarget.className += " w3-dark-grey";
+            }
+            
+            var mybtn = document.getElementsByClassName("testbtn")[0];
+            mybtn.click();
+            
+            // Accordions
+            function myAccFunc(id) {
+              var x = document.getElementById(id);
+              if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+              } else { 
+                x.className = x.className.replace(" w3-show", "");
+              }
+            }
+            
+            // Slideshows
+            var slideIndex = 1;
+            
+            function plusDivs(n) {
+              slideIndex = slideIndex + n;
+              showDivs(slideIndex);
+            }
+            
+            function showDivs(n) {
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = x.length} ;
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            
+            showDivs(1);
+            
+            // Progress Bars
+            function move() {
+              var elem = document.getElementById("myBar");   
+              var width = 5;
+              var id = setInterval(frame, 10);
+              function frame() {
+                if (width == 100) {
+                  clearInterval(id);
+                } else {
+                  width++; 
+                  elem.style.width = width + '%'; 
+                  elem.innerHTML = width * 1  + '%';
+                }
+              }
+            }
+        </script>
+    </body>
+</html>
