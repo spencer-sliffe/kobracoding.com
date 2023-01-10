@@ -1,22 +1,79 @@
-.w3-theme-l5 {color:#050A30 !important; background-color:#7dc7e3 !important}
-.w3-theme-l4 {color:#050A30 !important; background-color:#7dc7e3 !important}
-.w3-theme-l3 {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-theme-l2 {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-theme-l1 {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-theme-d1 {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-theme-d2 {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-theme-d3 {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-theme-d4 {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-theme-d5 {color:#7dc7e3 !important; background-color:#050A30 !important}
+.w3-theme-l5 {
+	color: #7dc7e3 !important;
+	background-color: #050A30  !important
+}
+.w3-theme-l4 {
+	color: #050A30 !important;
+	background-color: #7dc7e3 !important
+}
+.w3-theme-l3 {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-theme-l2 {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-theme-l1 {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-theme-d1 {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-theme-d2 {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-theme-d3 {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-theme-d4 {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-theme-d5 {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
 
-.w3-theme-light {color:#050A30 !important; background-color:#7dc7e3 !important}
-.w3-theme-dark {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-theme-action {color:#7dc7e3 !important; background-color:#050A30 !important}
+.w3-theme-light {
+	color: #050A30 !important;
+	background-color: #7dc7e3 !important
+}
+.w3-theme-dark {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-theme-action {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
 
-.w3-theme {color:#7dcfe3 !important; background-color:#050A30 !important}
-.w3-text-theme {color:#050A30 !important}
-.w3-border-theme {border-color:#050A30 !important}
+.w3-theme {
+	opacity: 1.0;
+	background: #523783; /* Old browsers */
+	background: -moz-linear-gradient(top, #523783 0%, #4a4b96 25%, #3f5da7 50%, #326fb5 75%, #2781c0 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523783', endColorstr='#2781c0',GradientType=1 ); /* IE6-9 */
+}
+.w3-text-theme {
+	color: #3e2272 !important
+}
+.w3-border-theme {
+	border-color: #050A30 !important
+}
 
-.w3-hover-theme:hover {color:#7dc7e3 !important; background-color:#050A30 !important}
-.w3-hover-text-theme:hover {color:#050A30 !important}
-.w3-hover-border-theme:hover {border-color:#050A30 !important}
+.w3-hover-theme:hover {
+	color: #7dc7e3 !important;
+	background-color: #050A30 !important
+}
+.w3-hover-text-theme:hover {
+	color: #3e2272 !important
+}
+.w3-hover-border-theme:hover {
+	border-color: #050A30 !important
+}
