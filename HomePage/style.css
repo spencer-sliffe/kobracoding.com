@@ -11,7 +11,12 @@ html {
 	-webkit-text-size-adjust: 100%
 }
 body {
-	margin: 0
+	margin: 0;
+	background: #523783; /* Old browsers */
+	background-image: -moz-linear-gradient(top, #523783 0%, #4a4b96 25%, #3f5da7 50%, #326fb5 75%, #2781c0 100%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(top, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(to bottom, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523783', endColorstr='#2781c0',GradientType=0 ) 
 }
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
 	display: block
@@ -145,11 +150,32 @@ html,body {
 	line-height: 1.5
 }
 html {
-	overflow-x: hidden
+	overflow-x: hidden;
+	
 }
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index:-1;
+  opacity: 0.25;
+}
+#video:after {
+  content: '';
+  opacity: 0.75;
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom: 0;
+
+}
+
 @font-face {
 	font-family: myFirstFont;
-	src: url(Exo-Regular.ttf);
+	src: url(Exo-Regular.ttf)
 }
 h1 {
 	font-size: 36px
@@ -254,7 +280,7 @@ a {
 	white-space: nowrap
 }
 .w3-btn:hover {
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+
 }
 .w3-btn,.w3-button {
 	-webkit-touch-callout: none;
@@ -811,11 +837,37 @@ padding-left: 4px;
 padding-right: 4px;
 font-size: 110%
 }
-.w3-card,.w3-card-2 {
-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+.w3-card {
+box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+background: #bf9e32; /* Old browsers */
+opacity: .7;
 }
-.w3-card-4,.w3-hover-shadow:hover {
-box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
+.w3-card-2{
+box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+background: #D7D7D8;
+opacity: .7;
+}
+.w3-card-3{
+box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+background: #b9f2ff;
+opacity: .7;
+}
+.w3-card-4 {
+opacity: 1.0;
+background: #523783; /* Old browsers */
+background: -moz-linear-gradient(top, #523783 0%, #4a4b96 25%, #3f5da7 50%, #326fb5 75%, #2781c0 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523783', endColorstr='#2781c0',GradientType=1 ); /* IE6-9 */
+}
+.w3-card-5{
+box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+opacity: 1.0;
+background: #523783; /* Old browsers */
+background: -moz-linear-gradient(top, #523783 0%, #4a4b96 25%, #3f5da7 50%, #326fb5 75%, #2781c0 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523783', endColorstr='#2781c0',GradientType=1 ); /* IE6-9 */
 }
 .w3-spin {
 animation: w3-spin 2s infinite linear
@@ -1090,7 +1142,9 @@ float: right!important
 }
 .w3-button:hover {
 color: #000!important;
-background-color: #ccc!important
+}
+.w3-button-1:hover {
+color: #fff!important;
 }
 .w3-transparent,.w3-hover-none:hover {
 background-color: transparent!important
