@@ -18,6 +18,15 @@ body {
 	background-image: linear-gradient(to bottom, #523783 0%,#4a4b96 25%,#3f5da7 50%,#326fb5 75%,#2781c0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523783', endColorstr='#2781c0',GradientType=0 ) 
 }
+body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section {
 	display: block
 }
@@ -839,17 +848,17 @@ font-size: 110%
 }
 .w3-card {
 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-background: #bf9e32; /* Old browsers */
+background: #949494;
 opacity: .7;
 }
 .w3-card-2{
 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-background: #D7D7D8;
+background: #949494;
 opacity: .7;
 }
 .w3-card-3{
 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-background: #b9f2ff;
+background: #949494;
 opacity: .7;
 }
 .w3-card-4 {
