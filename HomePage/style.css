@@ -219,7 +219,7 @@ h6 {
 h1,h2,h3,h4,h5,h6 {
 	font-family: myFirstFont;
 	font-weight: 400;
-	margin: 10px 0
+	margin: 2px 0
 }
 .w3-wide {
 	letter-spacing: 4px
@@ -851,15 +851,24 @@ box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 background: #bf9e32; /* Old browsers */
 opacity: .7;
 }
+.w3-card:hover{
+	opacity: 1.0;
+}
 .w3-card-2{
 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 background: #D7D7D8;
 opacity: .7;
 }
+.w3-card-2:hover{
+	opacity: 1.0;
+}
 .w3-card-3{
 box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 background: #b9f2ff;
 opacity: .7;
+}
+.w3-card-3:hover{
+	opacity: 1.0;
 }
 .w3-card-4 {
 opacity: 1.0;

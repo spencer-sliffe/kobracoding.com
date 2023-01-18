@@ -1,541 +1,481 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Kobra Coding</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="color.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<html lang="en">
 
-		    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <head>
+	<link rel="icon" href="favicon.ico" sizes="any">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
-		    <link rel="stylesheet" type="text/css" href="css/fullpage.min.css">
+    <title>Kobra Coding Market</title>
 
-		    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-		    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 
-		    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" type="text/css" href="css/fullpage.min.css">
 
-		    <link rel="stylesheet" href="css/responsive.css">
-		
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
     </head>
-  
+    
     <body>
-		
-	       
-        <!-- Side Navigation -->
-        <nav class="w3-sidebar w3-bar-block w3-card-5 w3-animate-left w3-center" style="display:none" id="mySidebar">
-            <h1 class="w3-xxlarge w3-text-theme">Kobra Coding Site Navigation</h1>
-            <button class="w3-xlarge w3-bar-item w3-button w3-text-theme" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
-            <a href="https://kobracoding.com" class="w3-xlarge w3-bar-item w3-button w3-text-theme">Home</a>
-            <a href="https://kobracoding.com/Join/Apply.html" class="w3-xlarge w3-bar-item w3-button w3-text-theme">Team Member Application</a>
-			<a href="https://kobracoding.com/Market/Market.html" class="w3-xlarge w3-bar-item w3-button w3-text-theme">Marketplace</a>
-        </nav>
-     
-        <header class="w3-container w3-theme w3-padding" id="myHeader">
-            <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-text-theme"></i> 
-            <div class="w3-center">
-                <h1 class="w3-xxxlarge w3-animate-bottom w3-text-theme">KOBRA CODING</h1>
-                <h4 class="w3-xlarge w3-animate-bottom w3-text-theme">MARKETPLACE</h4>
-				<!--
-                <div class="w3-padding-32">
-                    <div class="w3-bar w3-theme-l5">
-                        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Services')">Services</button>
-                        <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Opportunities')">Join</button>
-						<button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'Gallery')">Gallery</button>
-             		    <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openSide(event,'About')">About</button>
-                    </div>
-                   -->
-                </div>
+    
+    <div id="video">
+        <div class="preloader">
+            <div class="preloader-bounce">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </header> 
-		<div class="video">
-  	    <video autoplay muted loop id="myVideo">
-  	    	<source src="Resources/Images/Music - 35889.mp4" type="video/mp4">
-  		</video>
-	    <!--
-        <div id="id01" class="w3-modal">
-            <div class="w3-modal-content w3-card-4 w3-animate-top">
-                <header class="w3-container w3-theme">
-                <span onclick="document.getElementById('id01').style.display='none'"
-                    class="w3-button w3-display-topright">×</span>
-                <div class="w3-row-padding">
-                    <form class="w3-container w3-card-4" action="submit_1.php" id="form" method="post" name="form">
-                        <h2 class="w3-center">Apply to join Kobra Coding</h2>
-                        <div class="w3-section">      
-                            <input class="w3-input" type="text" name="o_name" required>
-                            <label>Name</label>
-                        </div>
-                        <div class="w3-section">      
-                            <input class="w3-input" type="email" name="o_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-                            <label>Email</label>
-                        </div>
-                        <div class="w3-section">      
-                            <input class="w3-input" type="text" name="p_experience" required>
-                            <label>Experience</label>
-                        </div>
-                        <hr>
-                        <div class="w3-row">
-                            <div class="w3-third">
-                                <input class="w3-radio" type="radio" name="position" value="coding" required>
-                                <label>Coder</label>
-                                <br>
-                                <input class="w3-radio" type="radio" name="position" value="designer">
-                                <label>Designer</label>
-                                <br>
-                                <input class="w3-radio" type="radio" name="position" value="entrepenuer">
-                                <label>Entrepenuer</label>
-                                <br><br>
+        </div>
+
+        <header id="header">
+            <div class="container-fluid">
+                <div class="navbar">
+                    <a href="kobracoding.com" id="logo" title="Kobra Coding Solutions">
+                       	kobra coding
+                    </a>
+                    <div class="navigation-row">
+                        <nav id="navigation">
+                            <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
+                            <div class="nav-box navbar-collapse">
+                                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
+                                    <li data-menuanchor="slide01" class="active"><a href="#slide01">Marketplace</a></li>
+									<li data-menuanchor="slide02"><a href="#slide02">Overview of Packages</a></li>
+                                    <li data-menuanchor="slide03"><a href="#slide03">Gold</a></li>
+                                    <li data-menuanchor="slide04"><a href="#slide04">Platinum</a></li>
+                                    <li data-menuanchor="slide05"><a href="#slide05">Diamond</a></li>              
+                                    <li data-menuanchor="slide06"><a href="#slide06">Contact Us</a></li>
+									<li data-menuanchor="slide07"><a href="https://kobracoding.com/Apply/Apply.html">Join Kobra Coding</a></li>
+									<li data-menuanchor="slide08"><a href="https://kobracoding.com">Home</a></li>							
+                                </ul>
                             </div>
-                            <div class="w3-third">
-                                <input class="w3-radio" type="radio" name="gender" value="male" required>
-                                <label>Male</label>
-                                <br>
-                                <input class="w3-radio" type="radio" name="gender" value="female">
-                                <label>Female</label><br><br>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <video autoplay muted loop id="myVideo">
+          <source src="images/Music - 35889.mp4" type="video/mp4">
+        </video>
+
+        <div id="fullpage" class="fullpage-default">
+
+            <div class="section animated-row" data-section="slide01">
+                <div class="section-inner">
+                    <div class="welcome-box">
+                        <span class="welcome-first animate" data-animate="fadeInUp">Kobra Coding</span>
+                        <h1 class="welcome-title animate" data-animate="fadeInUp">Marketplace</h1>
+                        <p class="animate" data-animate="fadeInUp">Gold | Platinum | Diamond</p>
+                        <div class="scroll-down next-section animate data-animate="fadeInUp""><img src="images/mouse-scroll.png" alt=""><span>Scroll Down</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section animated-row" data-section="slide02">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Overview of Packages</span>
+                                <h2>What are our Prices?</h2>
                             </div>
-                            <div class="w3-third">
-                                <input class="w3-radio" type="radio" name="age" value="young" required>
-                                <label>18 - 30</label>
-                                <br>
-                                <input class="w3-radio" type="radio" name="age" value="old">
-                                <label>31 +</label><br><br>
+                            <div class="gallery-section">
+                                <div class="gallery-list owl-carousel">                                    
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/gold.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>GOLD PACKAGE</h4>
+                                                <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/plat.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                               <h4>Kobra Coding Mobile App Preview</h4>
+                                               <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/diamond.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Kobra Coding Mobile App Preview</h4>
+                                                <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/gold.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                             <h4>Kobra Coding Mobile App Preview</h4>
+                                             <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/plat.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                               <h4>Kobra Coding Mobile App Preview</h4>
+                                               <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/diamond.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                               <h4>Kobra Coding Mobile App Preview</h4>
+                                               <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/gold.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Kobra Coding Mobile App Preview</h4>
+                                                <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>		
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/plat.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Kobra Coding Mobile App Preview</h4>
+                                                <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="images/diamond.jpeg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Kobra Coding Mobile App Preview</h4>
+                                                <p>Coming Soon!</p>
+                                            </div>
+                                        </div>
+                                    </div>							
+                                </div>
                             </div>
                         </div>
-                        <hr>
-                        <input type="submit" class="w3-button w3-hover-light-grey" >
-						<br>
-						<br>
-                    </form>
-					<h3><?php include "submit_1.php"?></h3>
+                    </div>
                 </div>
             </div>
-        </div>-->
-        <div id="id02" class="w3-modal">
-            <div class="w3-modal-content w3-card-4 w3-animate-top">
-                <header class="w3-container w3-theme">
-                <span onclick="document.getElementById('id02').style.display='none'"
-                    class="w3-button w3-display-topright">×</span>
-                <div class="w3-row-padding">
-                    <form class="w3-container w3-card-4" action="submit.php" id="form" method="post" name="form">
-                        <h2 class="w3-center">Coming soon...</h2>
-                        <!--<div class="w3-section">      
-                            <input class="w3-input" type="text" name="s_name" id="s_name"  required>
-                            <label for="s_name">Name</label>
-                        </div>
-                        <div class="w3-section">      
-                            <input class="w3-input" type="email" name="s_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-                            <label>Email</label>
-                        </div>
-                        <div class="w3-section">      
-                            <input class="w3-input" type="text" name="s_descript" required>
-                            <label>Brief Website Description</label>
-                        </div>
-                        <hr>
-                        <div class="w3-row">
-                            <div class="w3-half">
-                                <input id="business" class="w3-radio" type="radio" name="siteType" value="Business" required>
-                                <label>Business</label>
-                                <br>
-                                <input id="personal" class="w3-radio" type="radio" name="siteType" value="Personal">
-                                <label>Personal</label>
-								<br><br>
-                            </div>						
-                            <div class="w3-half">
-                                <input class="w3-radio" type="radio" name="needs" value="Design" required>
-                                <label>Design</label>
-                                <br>
-                                <input class="w3-radio" type="radio" name="needs" value="Development">
-                                <label>Development</label>
-                                <br>
-                                <input class="w3-radio" type="radio" name="needs" value="Management">
-                                <label>Management</label>
-								<br>
-                                <input class="w3-radio" type="radio" name="needs" value="All">
-                                <label>All</label>
-								<br><br>
+			
+            <div class="section animated-row" data-section="slide03">
+                <div class="section-inner">
+                    <div class="about-section">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 wide-col-laptop">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="about-contentbox">
+                                            <div class="animate" data-animate="fadeInUp">
+                                                <span>Our Team</span>
+                                                <h2>Who are we?</h2>
+                                                <p><strong>University of Kansas School of Engineering</strong> computer science students in the tail end of our junior year. We will be using the solutions built for <strong>Kobra Coding</strong> for our resumes after graduation.</p>
+                                            </div>
+                                            <div class="facts-list owl-carousel">
+                                  
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-graduation-cap counter-icon" aria-hidden="true"></i><span class="count-number">1</span> Year Until Graduation
+                                                    </div>
+                                                </div>
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-desktop counter-icon" aria-hidden="true"></i><span class="count-number">7+</span> Years Coding
+                                                    </div>
+                                                </div>
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-support counter-icon" aria-hidden="true"></i><span class="count-number">2</span> Team Members
+                                                    </div>
+                                                </div>
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-certificate counter-icon" aria-hidden="true"></i><span class="count-number">10+</span> Projects
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <figure class="about-img animate" data-animate="fadeInUp"><img src="images/output-onlinepngtools.png" class="rounded" alt=""></figure>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <hr>
-                       	<input name="submit" type="submit" class="w3-button w3-hover-light-grey" >
-						<br>
-						<br>-->
-                    </form>
-					<h3><?php include "submit.php"?></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide04">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Services</span>
+                                <h2>What we do?</h2>
+                            </div>
+                            <div class="services-section">
+                                <div class="services-list owl-carousel">
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="service-box">
+                                            <span class="service-icon"><i class="fa fa-bookmark" aria-hidden="true"></i></span>
+                                            <h3>Bootstrap Themes</h3>
+                                            <p>Solutions that are responsive, mobile-first front-end websites.</p>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="service-box">
+                                            <span class="service-icon"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+                                            <h3>HTML5, CSS, JS Coding</h3>
+                                            <p>Solutions that are coded in the standard markup language, cascading style sheets, and javascript to be compatible with any browser.</p>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="service-box">
+                                            <span class="service-icon"><i class="fa fa-desktop" aria-hidden="true"></i></span>
+                                            <h3>Website Management</h3>
+                                            <p>Solutions are hosted, supported, and consistently updated at clients request.</p>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="service-box">
+                                            <span class="service-icon"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                                            <h3>Mobile Ready</h3>
+                                            <p>Solutions are mobile device compatible.</p>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="service-box">
+                                            <span class="service-icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                                            <h3>Fast Support</h3>
+                                            <p>We work closely with our clients to ensure satisfaction.</p>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="service-box">
+                                            <span class="service-icon"><i class="fa fa-database" aria-hidden="true"></i></span>
+                                            <h3>24-hour Up Time</h3>
+                                            <p>Solutions are hosted on multiple servers to ensure resilience. </p>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="service-box">
+                                            <span class="service-icon"><i class="fa fa-bell" aria-hidden="true"></i></span>
+                                            <h3>Instant Updates</h3>
+                                            <p>Clients can send us solution updates anytime and we will implement their changes automatically.</p>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide05">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Our Skills</span>
+                                <h2>How are our teams' skillsets?</h2>
+                            </div>
+                            <div class="skills-row animate" data-animate="fadeInDown">
+                                <div class="row">
+                                    <div class="col-md-8 offset-md-2">   
+                                        <div class="skill-item">
+                                            <h6>Coding</h6>
+                                            <div class="skill-bar">
+                                                <span>95%</span>
+                                                <div class="filled-bar"></div>
+                                            </div>          
+                                        </div>
+                                        <div class="skill-item">
+                                            <h6>Creativity</h6>
+                                            <div class="skill-bar">
+                                                <span>85%</span>
+                                                <div class="filled-bar-2"></div>
+                                            </div>          
+                                        </div>
+                                        <div class="skill-item">
+                                            <h6>Communication</h6>
+                                            <div class="skill-bar">
+                                                <span>90%</span>
+                                                <div class="filled-bar-3"></div>
+                                            </div>          
+                                        </div>
+                                        <div class="skill-item last-skill">
+                                            <h6>Artistic Skill</h6>
+                                            <div class="skill-bar">
+                                                <span>75%</span>
+                                                <div class="filled-bar-4"></div>
+                                            </div>          
+                                        </div>                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="section animated-row" data-section="slide07">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Team Members</span>
+                                <h2>Who are we?</h2>
+                            </div>
+                            <div class="col-md-8 offset-md-2">
+                                <div class="testimonials-section">
+                                    <div class="testimonials-slider owl-carousel">
+                                        <div class="item animate" data-animate="fadeInUp">
+                                            <div class="testimonial-item">
+                                                <div class="client-row">
+                                                    <img src="images/6vMwiyuT_400x400.jpeg" class="rounded-circle" alt="profile 1">
+                                                </div>
+                                                <div class="testimonial-content">
+                                                    <h4>Sliffe</h4>
+                                                    <p>Junior at University of Kansas Studying Computer Science.</p>
+                                                    <span>Lead Developer</span>
+                                                </div>                                           
+                                            </div>
+                                        </div>
+                                        <div class="item animate" data-animate="fadeInUp">
+                                            <div class="testimonial-item">
+                                                <div class="client-row">
+                                                    <img src="images/6vMwiyuT_400x400.jpeg" class="rounded-circle" alt="profile 2">
+                                                </div>
+                                                <div class="testimonial-content">
+                                                    <h4>Cowell</h4>
+                                                    <p>Junior at University of Kansas Studying Computer Science.</p>
+                                                    <span>Creative Director</span>
+                                                </div>                                           
+                                            </div>
+                                        </div>                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide07">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Contact</span>
+                                <h2>Get In Touch!</h2>
+                            </div>
+                            <div class="contact-section">
+                                <div class="row">
+                                    <div class="col-md-6 animate" data-animate="fadeInUp">
+                                        <div class="contact-box">
+                                            <div class="contact-row">
+                                                <i class="fa fa-map-marker"></i> Eaton Hall, 1520 W 15th St, Lawrence, KS 66045
+                                            </div>
+                                            <div class="contact-row">
+                                                <i class="fa fa-phone"></i> Coming Soon...
+                                            </div>
+                                            <div class="contact-row">
+                                                <i class="fa fa-envelope"></i> spencer@kobracoding.com
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 animate" data-animate="fadeInUp">
+                                        <form id="ajax-contact" method="post" action="submit.php">
+                                            <div class="input-field">
+                                                <input type="text" class="form-control" name="name" id="name" required placeholder="Name">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="email" class="form-control" name="email" id="email" required placeholder="Email">
+                                            </div>
+                                            <div class="input-field">
+                                                <textarea class="form-control" name="message" id="message" required placeholder="Message"></textarea>
+                                            </div>
+                                            <button class="btn" type="submit">Submit</button>
+                                        </form>
+                                        <div id="form-messages" class="mt-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-		<div class="section animated-row" data-section="slide06">
-		                <div class="section-inner">
-		                    <div class="row justify-content-center">
-		                        <div class="col-md-8 wide-col-laptop">
-		                            <div class="title-block animate" data-animate="fadeInUp">
-		                                <span>App in progress</span>
-		                                <h2>what has been completed?</h2>
-		                            </div>
-		                            <div class="gallery-section">
-		                                <div class="gallery-list owl-carousel">
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_1.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                                <h4>Kobra Coding Mobile App Preview</h4>
-		                                                <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_3.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                                <h4>Kobra Coding Mobile App Preview</h4>
-		                                                <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_4.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                                <h4>Kobra Coding Mobile App Preview</h4>
-		                                                <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_5.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                               <h4>Kobra Coding Mobile App Preview</h4>
-		                                               <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_1.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                                <h4>Kobra Coding Mobile App Preview</h4>
-		                                                <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_3.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                             <h4>Kobra Coding Mobile App Preview</h4>
-		                                             <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_4.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                               <h4>Kobra Coding Mobile App Preview</h4>
-		                                               <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_5.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                               <h4>Kobra Coding Mobile App Preview</h4>
-		                                               <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                    <div class="item animate" data-animate="fadeInUp">
-		                                        <div class="portfolio-item">
-		                                            <div class="thumb">
-		                                                <img src="images/App_1.jpeg" alt="">
-		                                            </div>
-		                                            <div class="thumb-inner animate" data-animate="fadeInUp">
-		                                                <h4>Kobra Coding Mobile App Preview</h4>
-		                                                <p>Coming Soon!</p>
-		                                            </div>
-		                                        </div>
-		                                    </div>									
-		                                </div>
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
-        <div id="Services" class="w3-container side w3-animate-opacity">
-            <div class="w3-row-padding w3-center w3-margin-top">
-                <div class="w3-third">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                        <h3 class="w3-fa-theme">GOLD PACKAGE</h3>
-                        <br>
-                        <i class="fa fa-trophy w3-margin-bottom w3-fa-theme" style="font-size:120px"></i>
-                        <p class="w3-fa-theme">COMING SOON...</p>
-             
-                    </div>
-                </div>
-                <div class="w3-third">
-                    <div class="w3-card-2 w3-container" style="min-height:460px">
-                        <h3 class="w3-fa-theme">PLATINUM PACKAGE</h3>
-                        <br>
-                        <i class="fa fa-server w3-margin-bottom w3-fa-theme" style="font-size:120px"></i>
-                        <p class="w3-fa-theme">COMING SOON...</p>                        
-                    </div>
-                </div>
-                <div class="w3-third">
-                    <div class="w3-card-3 w3-container" style="min-height:460px">
-                        <h3 class="w3-fa-theme">DIAMOND PACKAGE</h3>
-                        <br>
-                        <i class="fa fa-diamond w3-margin-bottom w3-fa-theme" style="font-size:120px"></i>
-                        <p class="w3-fa-theme">COMING SOON...</p>
-                    </div>
-                </div>
+
+        <div id="social-icons">
+            <div class="text-right">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/profile.php?id=100089482775319" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/kobracoding" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/spencer-sliffe" title="Github"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.instagram.com/kobracoding/" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                </ul>
             </div>
-            
-            <div class="w3-center">
-                <div class="w3-padding-32">
-                    <div class="w3-bar w3-theme-l5">
-                        <button class="w3-button w3-xlarge" onclick="document.getElementById('id02').style.display='block'" style="font-weight:900;">Go To Checkout</button>
-                    </div>
-                    <!--	 --> 
-                </div>
-            </div>
-            
         </div>
-		<!--
-        <div id="Opportunities" class="w3-container side w3-animate-opacity">
-            <div class="w3-row-padding w3-center w3-margin-top">
-                <div class="w3-third">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                        <h3>Coder</h3>
-                        <br>
-                        <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JS</p>
-                        <p>SQL</p>
-                        <p>XML</p>
-                    </div>
-                </div>
-                <div class="w3-third">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                        <h3>Entrepenuer</h3>
-                        <br>
-                        <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                        <p>Creative</p>
-                        <p>Imaginative</p>
-                        <p>Ideas</p>
-                        <p>Ambitious</p>
-                        <p>Connections</p>
-                    </div>
-                </div>
-                <div class="w3-third">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                        <h3>Designer</h3>
-                        <br>
-                        <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                        <p>Art</p>
-                        <p>Colors</p>
-                        <p>Digital design</p>
-                        <p>Photoshop</p>
-                        <p>Vectors</p>
-                        <p>Animation</p>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="w3-center">
-                <div class="w3-padding-32">
-                    <div class="w3-bar w3-theme">
-                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Apply to Join</button>
-                    </div>
-     
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div id="Gallery" class="w3-container side w3-animate-opacity">
-            <div class="w3-center">
-                <h1 class="w3-xxlarge w3-animate-bottom">Kobra Coding App in Progress</h1>
-			</div>
-            <div class="w3-row-padding w3-center w3-margin-top">
-                <div class="w3-quarter">
-                    <div class="w3-card w3-container" style="min-height:460px">
-						<img class="w3-image" src="Resources/Images/App_1.png">
-                    </div>
-                </div>
-                <div class="w3-quarter">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                   		<img class="w3-image" src="Resources/Images/App_2.png">
-                    </div>
-                </div>
-                <div class="w3-quarter">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                        <img class="w3-image" src="Resources/Images/App_4.png">
-                    </div>
-                </div>
-                <div class="w3-quarter">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                        <img class="w3-image" src="Resources/Images/App_5.png">
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="w3-center">
-                <div class="w3-padding-32">
-                    <div class="w3-bar w3-theme">
-                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Apply to Join</button>
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div id="About" class="w3-container side w3-animate-opacity">
-            <div class="w3-row-padding w3-center w3-margin-top">
-                <div class="w3-half">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                        <h3>Background</h3>
-                        <br>
-                        <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                        <p>Managed by University of Kansas Computer Science Students</p>
-                        <p>Educated in Software Engineering</p>
-                        <p>7+ Years Coding Experience</p>
-						<p>Project Inspired</p>
-						<p>Expanding and Sharpening Skillsets</p>
-                    </div>
-                </div>
-                <div class="w3-half">
-                    <div class="w3-card w3-container" style="min-height:460px">
-                        <h3>Future</h3>
-                        <br>
-                        <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-                        <p>Building Portfol</p>
-                        <p>App for Kobra Coding Coming in 2023</p>
-                        <p>Game Development</p>
-                        <p>Continue to Provide Website Services</p>
-                        <p>Expand and Collaborate with Others of Like Mind</p>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="w3-center">
-                <div class="w3-padding-32">
-                    <div class="w3-bar w3-theme">
-                        <button class="w3-button w3-xlarge w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Apply to Join</button>
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </div>
-	-->
-        <!-- Footer -->
-        <footer class="w3-container w3-padding-16">
-            <p><a href="https://kobracoding.com" class="w3-button-1" target="_blank">BACK TO MAIN SITE</a></p>
-            <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-                <span class="w3-text w3-button w3-padding">Go To Top</span>    
-                <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
-                <i class="fa fa-chevron-circle-up"></i></span></a>
-            </div>
-            <p>Email us   <a href="mailto:spencer@kobra.com" class="w3-button-1" target="_blank">HERE</a></p>
-        </footer>
-		</div>
-        <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-        <script>
-            // Side navigation
-            function w3_open() {
-              var x = document.getElementById("mySidebar");
-              x.style.width = "100%";
-              x.style.fontSize = "40px";
-              x.style.paddingTop = "10%";
-              x.style.display = "block";
-            }
-            function w3_close() {
-              document.getElementById("mySidebar").style.display = "none";
-            }
-            
-            // Tabs
-            function openSide(evt, name) {
-              var i;
-              var x = document.getElementsByClassName("side");
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-              }
-              var activebtn = document.getElementsByClassName("testbtn");
-              for (i = 0; i < x.length; i++) {
-                activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
-              }
-              document.getElementById(name).style.display = "block";
-              evt.currentTarget.className += " w3-dark-grey";
-            }
-            
-            var mybtn = document.getElementsByClassName("testbtn")[0];
-            mybtn.click();
-            
-            // Accordions
-            function myAccFunc(id) {
-              var x = document.getElementById(id);
-              if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-              } else { 
-                x.className = x.className.replace(" w3-show", "");
-              }
-            }
-            
-            // Slideshows
-            var slideIndex = 1;
-            
-            function plusDivs(n) {
-              slideIndex = slideIndex + n;
-              showDivs(slideIndex);
-            }
-            
-            function showDivs(n) {
-              var x = document.getElementsByClassName("mySlides");
-              if (n > x.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = x.length} ;
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-              }
-              x[slideIndex-1].style.display = "block";  
-            }
-            
-            showDivs(1);
-            
-            // Progress Bars
-            function move() {
-              var elem = document.getElementById("myBar");   
-              var width = 5;
-              var id = setInterval(frame, 10);
-              function frame() {
-                if (width == 100) {
-                  clearInterval(id);
-                } else {
-                  width++; 
-                  elem.style.width = width + '%'; 
-                  elem.innerHTML = width * 1  + '%';
-                }
-              }
-            }
-        </script>
-    </body>
+    </div>  
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/fullpage.min.js"></script>
+
+    <script src="js/scrolloverflow.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/jquery.inview.min.js"></script>
+
+    <script src="js/form.js"></script>
+
+    <script src="js/custom.js"></script>
+
+
+  </body>
 </html>

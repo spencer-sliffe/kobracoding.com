@@ -593,6 +593,7 @@ a#logo {
   position: relative;
   z-index: 9;
   border-radius: 10px;
+  opacity: .7;
 }
 .portfolio-item .thumb-inner {
   position: absolute;
