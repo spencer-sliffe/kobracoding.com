@@ -458,6 +458,12 @@ a#logo {
 .about-img {
   margin: 0 auto 40px;
   position:relative;
+  top:4%;
+}
+.about-img-2 {
+  margin: 0 auto 40px;
+  position:relative;
+  top:10%;
 }
 
 .about-contentbox {
