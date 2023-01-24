@@ -590,11 +590,11 @@ a#logo {
   text-align: center;
 }
 .portfolio-item img {
+	margin-left:-.9px;
   max-width: 100%;
   overflow: hidden;
   position: relative;
   z-index: 9;
-  border-radius: 10px;
   opacity: .7;
 }
 .portfolio-item .thumb-inner {
@@ -604,10 +604,12 @@ a#logo {
   text-align: left;
   padding: 20px;
   background-color: rgba(250,250,250,0.25);
-  width: 100%;
+  width: 99.8%;
   height: 60px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -638,6 +640,56 @@ a#logo {
   color: #1e1e1e;
   margin-bottom: 20px;
 }
+.portfolio-item-2 img {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+  border-radius: 10px;
+  opacity: .7;
+}
+.portfolio-item-2 .thumb-inner {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  text-align: left;
+  padding: 20px;
+  background-color: rgba(250,250,250,0.25);
+  width: 100%;
+  height: 60px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.portfolio-item-2 .thumb-inner h4 {
+  margin-bottom: 0;
+  font-size: 16px;
+  margin-top: 0px;
+}
+.portfolio-item-2 .thumb-inner p {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  margin-bottom: 0px;
+}
+.portfolio-item-2:hover .thumb-inner p {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  color: #4a4a4a;
+}
+.portfolio-item-2:hover .thumb-inner {
+  border-radius: 10px;
+  height: 100%;
+  background-color: rgba(250,250,250,0.9)
+}
+.portfolio-item-2:hover .thumb-inner h4 {
+   margin-top: 30%;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+
 
 /*==============================================
 08. CONTACT BLOCK CSS
