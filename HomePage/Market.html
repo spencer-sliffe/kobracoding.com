@@ -71,7 +71,7 @@
                 </div>
             </header>
             <video autoplay muted loop id="myVideo">
-                <source src="images/Music - 35889.mp4" type="video/mp4">
+                <source src="images/Music - 35889.mp4" type="video/mp4"/>
             </video>
             <div id="fullpage" class="fullpage-default">
                 <div class="section animated-row" data-section="slide01">
@@ -98,7 +98,7 @@
                                         <div class="item animate" data-animate="fadeInUp">
                                             <div class="portfolio-item">
                                                 <div class="thumb">
-                                                    <img src="images/FixedSizeKobra.png" alt="">
+                                                    <img src="images/FixedSizeKobra.png" alt="" />
                                                 </div>
                                                 <div class="thumb-inner animate" data-animate="fadeInUp">
                                                     <h4>Step 1: Reach Out</h4>
@@ -399,7 +399,6 @@
                                                 <div class="animate" data-animate="fadeInUp">
                                                     <span>GOLD PACKAGE</span>
                                                     <h2>What is included?</h2>
-                                                    <p></p>
                                                 </div>
                                                 <div class="facts-list owl-carousel">
                                                     <div class="item animate" data-animate="fadeInUp">
@@ -451,7 +450,6 @@
                                                 <div class="animate" data-animate="fadeInUp">
                                                     <span>PLATINUM PACKAGE</span>
                                                     <h2>What is included?</h2>
-                                                    <p></p>
                                                 </div>
                                                 <div class="facts-list owl-carousel">
                                                     <div class="item animate" data-animate="fadeInUp">
@@ -503,7 +501,6 @@
                                               <div class="animate" data-animate="fadeInUp">
                                                   <span>DIAMOND PACKAGE</span>
                                                   <h2>What is included?</h2>
-                                                  <p></p>
                                               </div>
                                               <div class="facts-list owl-carousel">
                                                   <div class="item animate" data-animate="fadeInUp">
@@ -600,7 +597,12 @@
                  </ul>
              </div>
          </div>
-        
+        <script>var bg = $("#video");
+			function resizeBackground() {
+			    bg.height( $(window).height() + 60);
+			}
+			$(window).resize(resizeBackground);
+			resizeBackground();</script>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/fullpage.min.js"></script>
