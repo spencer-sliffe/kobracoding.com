@@ -1,9 +1,4 @@
 /*
-
-Elegance Template
-
-https://templatemo.com/tm-528-elegance
-
 ==================================================
 CSS SITEMAP >>>>
 
@@ -20,10 +15,6 @@ CSS SITEMAP >>>>
 
 
 ==================================================*/
-
-/*==============================================
-01. GENERAL CSS
-================================================*/
 
 html,
 body {
@@ -293,9 +284,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523783', end
 }
 
 
-/*==============================================
-02. HEADER CSS
-================================================*/
+
 #header {
   padding:20px 0;
   position: fixed;
@@ -394,9 +383,7 @@ a#logo {
   color:#1e1e1e;
   background-color: #fff;
 }
-/*==============================================
-04. WELCOME BLOCK CSS
-================================================*/
+
 .welcome-box {
   font-size:20px;
   line-height:1.7;
@@ -451,9 +438,6 @@ a#logo {
   opacity: 1;
 }
 
-/*==============================================
-05. ABOUT ME
-================================================*/
 .about-img {
   margin: 0 auto 40px;
   position:relative;
@@ -511,9 +495,7 @@ a#logo {
   margin-bottom:10px;
 }
 
-/*==============================================
-06. SERVICES BLOCK CSS
-================================================*/
+
 .title-block {
   margin-bottom: 40px;
 }
@@ -581,9 +563,6 @@ a#logo {
     background: #fff
 }
 
-/*==============================================
-07. WORK BLOCK CSS
-================================================*/
 .gallery-section {
   text-align: center;
 }
@@ -636,9 +615,6 @@ a#logo {
   margin-bottom: 20px;
 }
 
-/*==============================================
-08. CONTACT BLOCK CSS
-================================================*/
 ::-webkit-input-placeholder {
   color:#fff !important;
   opacity:1;
@@ -765,9 +741,6 @@ textarea.form-control {
   font-size: 25px;
 }
 
-/*==============================================
-09. TESTIMONOALS BLOCK CSS
-================================================*/
 .testimonials-section .item {
   background-color: rgba(250,250,250,0.25);
   padding: 40px;
@@ -789,9 +762,7 @@ textarea.form-control {
   font-style: italic;
 }
 
-/*==============================================
-10. SKILLS BLOCK CSS
-================================================*/
+
 .skills-row {
   margin-top: 80px;
 }
