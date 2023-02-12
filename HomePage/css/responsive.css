@@ -130,6 +130,9 @@
 	}
 }
 @media only screen and (max-width: 991px) {
+	#reef{
+		bottom:-30%;
+	}
 	.welcome-box {
 		padding: 150px 0px;
 	}
@@ -194,6 +197,9 @@
 	}
 }
 @media only screen and (max-width: 767px) {
+	#reef{
+		bottom: -20%;
+	}
 	#header {
 		position: fixed;
 		top: 0;
@@ -422,9 +428,6 @@
 	}
 }
 @media only screen and (max-width: 320px) {
-	.gallery-overlay p {
-		display: none;
-	}
 	.testimonial-content:before {
 		left: 43%;
 	}
