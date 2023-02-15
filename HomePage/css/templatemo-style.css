@@ -39,8 +39,12 @@ body {
   text-align:center;
   background: #523783;
 }
+body::-webkit-scrollbar{
+    display: none;
+  }
 html {
-  -ms-overflow-style: scrollbar;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .alltrans,
@@ -153,7 +157,7 @@ figure {
 background: #523783; /* Old browsers */
 background: -moz-linear-gradient(bottom, rgba(82, 55, 131, .7) 0%, rgba(74, 75, 150, .55) 22%, rgba(63, 93, 167, .4) 50%,  rgba(82,55,131, 1) 75%, rgba(82,55,131, 1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(bottom, rgba(82, 55, 131, .7) 0%, rgba(74, 75, 150, .55) 22%, rgba(63, 93, 167, .4) 50%, rgba(82,55,131, 1) 75%,  rgba(82,55,131, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to top, bottom, rgba(82, 55, 131, .7) 0%, rgba(74, 75, 150, .55) 22%, rgba(63, 93, 167, .4) 50%,  rgba(82,55,131, 1) 75%,  rgba(82,55,131, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: linear-gradient(to top, bottom, rgba(82, 55, 131, .7) 0%, rgba(74, 75, 150, .55) 22%, rgba(63, 93, 167, .4) 50%,  rgba(82,55,131, 1) 755%,  rgba(82,55,131, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#523783', endColorstr='#2781c0',GradientType=0 ); /* IE6-9 */
 position:fixed;
 top:0;
@@ -168,8 +172,9 @@ right:0;
   bottom: -260px;
   min-width: 100%; 
   min-height: 100%;
-  opacity: 1 !important;
-  z-index: -1 !important;
+  z-index: -11;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+   overflow-x: hidden;
 }
 
 #myImage6{
@@ -180,25 +185,6 @@ right:0;
 	max-height: 40vh;
 	z-index: -10 !important;
 	opacity: 1 !important;
-}
-#reef{
-	position: fixed;
-    right: 200px;
-    bottom: -45%;
-	width: 100%;
-	max-height: 100vh;
-	z-index: -10;
-	opacity: .8 !important;
-}
-#rock{
-	position: fixed;
-	bottom:-20%;
-    right: -35%;
-	width: 60%;
-	max-height: 100vh;
-	z-index: -10;
-	opacity: .8 !important;
-	transform: rotate(-18deg);
 }
 .wrapper-background-dark:after {
   background: #222;
