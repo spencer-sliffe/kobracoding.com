@@ -264,15 +264,16 @@ Spencer Sliffe
 	.navbar-nav {
 		overflow-y: auto;
 		display:block;
-		background: rgba(230, 230, 230, 0);
+		background: rgba(230, 230, 230, .4);
+		border-radius: 10px;
 	}
 	.navbar-nav li a:after {
 		display:none;
 	}
 	.nav-box {
 		position: absolute;
-		left: -15px;
-		right: -15px;
+		left: 30vw;
+		right: 30vw;
 		border: 0;
 		box-shadow: none;
 		background: transparent;

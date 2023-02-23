@@ -11,6 +11,7 @@ body {
   -ms-font-smoothing: antialiased;
   font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  height: -webkit-fill-available;
 }
 body {
   font: 16px/1.6 'Custom', Arial, Helvetica, sans-serif;
