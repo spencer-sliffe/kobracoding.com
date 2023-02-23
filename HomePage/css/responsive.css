@@ -1,3 +1,9 @@
+/*
+responsive.css
+kobracoding.com
+Spencer Sliffe
+*/
+
 @media only screen and (min-width: 768px) {
 	.nav-box {
 		display:block !important;
@@ -130,9 +136,6 @@
 	}
 }
 @media only screen and (max-width: 991px) {
-	#reef{
-		bottom:-30%;
-	}
 	.welcome-box {
 		padding: 150px 0px;
 	}
@@ -204,10 +207,10 @@
 		position: fixed;
 		top: 0;
 		z-index: 6666;
-		background-color: rgba(250,250,250,0.9);
+		background-color: rgba(250,250,250,0);
 	}
 	#navigation button i {
-		color: #1e1e1e;
+		color: #fff;
 	}
 	.welcome-box {
 		padding: 150px 0px;
@@ -254,14 +257,14 @@
 		text-align: center;
 	}
 	.navigation-menu > li > a {
-		color:#222;
-		padding:15px;
-		line-height:1.2;
+		color: #fff;
+		padding: 5px;
+		line-height: 1.1;
 	}
 	.navbar-nav {
 		overflow-y: auto;
 		display:block;
-		background: rgba(230, 230, 230, 0.25);
+		background: rgba(230, 230, 230, 0);
 	}
 	.navbar-nav li a:after {
 		display:none;
@@ -272,9 +275,8 @@
 		right: -15px;
 		border: 0;
 		box-shadow: none;
-		background: #fff;
+		background: transparent;
 		text-align:left;
-		top: 100%;
 		display:none;
 	}
 	.welcome-title {
