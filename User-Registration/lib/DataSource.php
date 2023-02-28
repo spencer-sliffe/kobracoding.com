@@ -24,7 +24,7 @@ class DataSource
 
     const USERNAME = 'spencersliffe14';
 
-    const PASSWORD = 'Badger2002!';
+    const PASSWORD = '***********';
 
     const DATABASENAME = 'kobracodingdatabase';
 
