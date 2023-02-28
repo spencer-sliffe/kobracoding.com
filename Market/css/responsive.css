@@ -362,6 +362,9 @@ Spencer Sliffe
 	}
 }
 @media only screen and (max-width: 575px) {
+	#mainVideo {
+		display: none;
+	}
 	.welcome-title {
 		font-size: 40px;
 	}
@@ -423,6 +426,9 @@ Spencer Sliffe
 	}
 }
 @media only screen and (max-width: 460px) {
+	#mainVideo {
+		display: none;
+	}
 	h4 {
 		font-size: 14px;
 	}
@@ -431,6 +437,9 @@ Spencer Sliffe
 	}
 }
 @media only screen and (max-width: 320px) {
+	#mainVideo {
+		display: none;
+	}
 	.testimonial-content:before {
 		left: 43%;
 	}
