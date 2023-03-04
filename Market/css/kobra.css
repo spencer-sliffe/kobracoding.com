@@ -27,6 +27,9 @@ html {
   scrollbar-width: none;
 }
 
+#TheButton{
+	background-color: transparent;
+}
 
 
 .alltrans,
