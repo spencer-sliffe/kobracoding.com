@@ -4,6 +4,12 @@ kobracoding.com
 Spencer Sliffe
 */
 
+@media (max-width: 767px) {
+  #mainVideo {
+    display: none !important;
+  }
+}
+
 @media only screen and (min-width: 768px) {
 	.nav-box {
 		display:block !important;
