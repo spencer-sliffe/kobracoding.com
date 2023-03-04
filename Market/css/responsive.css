@@ -200,9 +200,6 @@ Spencer Sliffe
 	}
 }
 @media only screen and (max-width: 767px) {
-	#reef{
-		bottom: -20%;
-	}
 	#header {
 		position: fixed;
 		top: 0;
@@ -257,14 +254,19 @@ Spencer Sliffe
 		text-align: center;
 	}
 	.navigation-menu > li > a {
-		color: #fff;
+		color: rgba(0, 0, 0, .7);
+		padding: 5px;
+		line-height: 1.1;
+	}
+	.navigation-menu > li > a:hover {
+		color: rgba(0, 0, 0, 1);
 		padding: 5px;
 		line-height: 1.1;
 	}
 	.navbar-nav {
 		overflow-y: auto;
 		display:block;
-		background: rgba(230, 230, 230, .4);
+		background: rgba(230, 230, 230, .85);
 		border-radius: 10px;
 	}
 	.navbar-nav li a:after {
