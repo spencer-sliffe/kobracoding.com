@@ -17,7 +17,7 @@ particlesJS('particles-js',
 	  "fpsLimit": 120,
     "particles": {
       "number": {
-        "value": 100,
+        "value": 200,
         "density": {
           "enable": true,
           "value_area": 800
@@ -52,12 +52,12 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 15,
+        "value": 10,
         "random": true,
         "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
+          "enable": true,
+          "speed": 10,
+          "size_min": 1,
           "sync": false
         }
       },
@@ -70,7 +70,7 @@ particlesJS('particles-js',
       },
       "move": {
         "enable": true,
-        "speed": 4,
+        "speed": 3,
         "direction": "top",
         "random": false,
         "straight": false,
