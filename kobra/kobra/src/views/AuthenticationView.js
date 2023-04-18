@@ -1,48 +1,43 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button, Container, Box, Paper, Typography, LinearProgress } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import { useHistory } from "react-router-dom";
-import AuthenticationViewModel from "./viewModels/AuthenticationViewModel";
+import { TextField, Button, Container, Box, Paper, Typography, LinearProgress } from "@mui/material";
+import { styled } from "@mui/system";
+import { useNavigate } from "react-router-dom";
+import AuthenticationViewModel from "../viewModels/AuthenticationViewModel";
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    minHeight: "100vh",
-    backgroundColor: theme.palette.primary.main,
-  },
-  logo: {
-    width: "100%",
-    height: "auto",
-    maxHeight: "25%",
-    marginTop: "13%",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    width: "100%",
-  },
-  textField: {
-    margin: theme.spacing(1),
-    width: "75%",
-    backgroundColor: "rgba(255, 255, 255, 0.5)",
-  },
-  button: {
-    margin: theme.spacing(1),
-    width: "50%",
-    backgroundColor: theme.palette.common.white,
-  },
-  errorText: {
-    color: theme.palette.error.main,
-  },
+const StyledContainer = styled(Container)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  minHeight: "100vh",
+  backgroundColor: theme.palette.primary.main,
+}));
+
+const StyledLogo = styled("img")(({ theme }) => ({
+  width: "100%",
+  height: "auto",
+  maxHeight: "25%",
+  marginTop: "13%",
+}));
+
+const StyledTextField = styled(TextField)(({ theme }) => ({
+  margin: theme.spacing(1),
+  width: "75%",
+  backgroundColor: "rgba(255, 255, 255, 0.5)",
+}));
+
+const StyledButton = styled(Button)(({ theme }) => ({
+  margin: theme.spacing(1),
+  width: "50%",
+  backgroundColor: theme.palette.common.white,
+}));
+
+const ErrorText = styled(Typography)(({ theme }) => ({
+  color: theme.palette.error.main,
 }));
 
 function AuthenticationView() {
-  const classes = useStyles();
-  const history = useHistory();
   const authViewModel = new AuthenticationViewModel();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -58,10 +53,9 @@ function AuthenticationView() {
 
   useEffect(() => {
     if (authViewModel.isAuthenticated) {
-      history.push("/home");
+      navigate("/home");
     }
-  }, [authViewModel.isAuthenticated, history]);
-
+  }, [authViewModel.isAuthenticated, navigate]);
   const handleAction = () => {
     if (selection === 0) {
       authViewModel.signIn(email, password);
@@ -70,9 +64,10 @@ function AuthenticationView() {
     }
   };
 
+
   return (
-    <Container className={classes.container} maxWidth="sm">
-      <img className={classes.logo} src="kobracoding-logo.png" alt="KobraCoding Logo" />
+    <StyledContainer maxWidth="sm">
+      <StyledLogo src="kobracoding-logo.png" alt="KobraCoding Logo" />
       <Paper elevation={3} square>
         <Box display="flex" flexDirection="row">
           <Button onClick={() => setSelection(0)} variant={selection === 0 ? "contained" : "outlined"}>
@@ -83,20 +78,21 @@ function AuthenticationView() {
           </Button>
         </Box>
       </Paper>
-      <form className={classes.form}>
-        <TextField className={classes.textField} label="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <TextField className={classes.textField} label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      <form>
+        <StyledTextField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <StyledTextField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         {selection === 1 && (
-          <TextField className={classes.textField} label="Confirm Password" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+          <StyledTextField label="Confirm Password" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
         )}
-        {authViewModel.isError && <Typography className={classes.errorText}>{authViewModel.errorMessage}</Typography>}
-        <Button className={classes.button} onClick={handleAction} disabled={authViewModel.isLoading}>
+        {authViewModel.isError && <ErrorText>{authViewModel.errorMessage}</ErrorText>}
+        <StyledButton onClick={handleAction} disabled={authViewModel.isLoading}>
           {selection === 0 ? "Sign In" : "Sign Up"}
-        </Button>
+        </StyledButton>
         {authViewModel.isLoading && <LinearProgress />}
       </form>
-    </Container>
+    </StyledContainer>
   );
+ 
 }
 
 export default AuthenticationView;

@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
+import { auth } from '../firebase';
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
+import { useAuth } from "../AuthContext";
+
 
 class AuthenticationViewModel {
   constructor() {
