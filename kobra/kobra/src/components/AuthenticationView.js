@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TextField, Button, Container, Box, Paper, Typography, LinearProgress } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
-import AuthenticationViewModel from "./AuthenticationViewModel";
+import AuthenticationViewModel from "./viewModels/AuthenticationViewModel";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -98,4 +98,7 @@ function AuthenticationView() {
     </Container>
   );
 }
+
+export default AuthenticationView;
+
 
