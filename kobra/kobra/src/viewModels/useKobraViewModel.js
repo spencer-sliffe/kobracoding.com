@@ -2,9 +2,7 @@ import {
     useState,
     useEffect
 } from "react";
-import {
-    useFSPostManager
-} from "../firebase/useFSPostManager";
+import FSPostManager from "../firebase/useFSPostManager";
 
 export function useKobraViewModel() {
     const [posts, setPosts] = useState([]);
@@ -113,14 +111,15 @@ export function useKobraViewModel() {
     };
 
     return {
-        posts,
-        comments,
-        addPost,
-        updateLikeCount,
-        updateDislikeCount,
-        updateComments,
-        updatePost,
-        deletePost,
-        fetchComments,
-    };
+    posts,
+    comments,
+    fetchPosts, // <-- Add this line
+    addPost,
+    updateLikeCount,
+    updateDislikeCount,
+    updateComments,
+    updatePost,
+    deletePost,
+    fetchComments,
+  };
 }

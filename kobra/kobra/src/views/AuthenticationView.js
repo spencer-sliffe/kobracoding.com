@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TextField, Button, Container, Box, Paper, Typography, LinearProgress } from "@mui/material";
 import { styled } from "@mui/system";
 import { useNavigate } from "react-router-dom";
-import AuthenticationViewModel from "../viewModels/AuthenticationViewModel";
+import { useAuthenticationViewModel } from "../viewModels/useAuthenticationViewModel";
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   display: "flex",
@@ -36,7 +36,7 @@ const ErrorText = styled(Typography)(({ theme }) => ({
 }));
 
 function AuthenticationView() {
-  const authViewModel = new AuthenticationViewModel();
+  const authViewModel = useAuthenticationViewModel();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,18 +44,11 @@ function AuthenticationView() {
   const [selection, setSelection] = useState(0);
 
   useEffect(() => {
-    authViewModel.startListening();
-
-    return () => {
-      authViewModel.stopListening();
-    };
-  }, []);
-
-  useEffect(() => {
     if (authViewModel.isAuthenticated) {
       navigate("/home");
     }
   }, [authViewModel.isAuthenticated, navigate]);
+
   const handleAction = () => {
     if (selection === 0) {
       authViewModel.signIn(email, password);
@@ -63,8 +56,6 @@ function AuthenticationView() {
       authViewModel.signUp(email, password, confirmPassword);
     }
   };
-
-
   return (
     <StyledContainer maxWidth="sm">
       <StyledLogo src="kobracoding-logo.png" alt="KobraCoding Logo" />
@@ -92,9 +83,7 @@ function AuthenticationView() {
       </form>
     </StyledContainer>
   );
- 
+
 }
 
 export default AuthenticationView;
-
-

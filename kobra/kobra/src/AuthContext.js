@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, useEffect } from "react";
-import AuthenticationViewModel from "./viewModels/AuthenticationViewModel";
+import { createContext, useContext, useState } from "react";
+import useAuthenticationViewModel from "./viewModels/useAuthenticationViewModel";
 
 const AuthContext = createContext();
 
@@ -8,14 +8,9 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const [authViewModel] = useState(new AuthenticationViewModel());
+  const authViewModel = useAuthenticationViewModel();
 
-  useEffect(() => {
-    authViewModel.startListening();
-    return () => {
-      authViewModel.stopListening();
-    };
-  }, [authViewModel]);
-
-  return <AuthContext.Provider value={authViewModel}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={authViewModel}>{children}</AuthContext.Provider>
+  );
 };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useKobraViewModel } from "../viewModels/useKobraViewModel";
 import PostRow from "./PostRow";
-import { CreateAPostView } from "./CreateAPostView";
+import CreateAPostView from "./CreateAPostView";
 import "./css/KobraView.css";
 
 const KobraView = () => {
@@ -41,7 +41,7 @@ const KobraView = () => {
         ))}
       </div>
 
-      <CreatePostModal
+      <CreateAPostView
         isOpen={isPresentingCreatePostView}
         viewModel={viewModel}
         onRequestClose={() => setIsPresentingCreatePostView(false)}

@@ -6,16 +6,15 @@ import AccountView from "./AccountView";
 import KobraView from "./KobraView";
 import { InboxView } from "./InboxView";
 import PackageView from "./PackageView";
-import AuthenticationViewModel from "../viewModels/AuthenticationViewModel";
-
+import useAuthenticationViewModel from "../viewModels/useAuthenticationViewModel";
 
 export default function HomePageView() {
   const [selectedTab, setSelectedTab] = useState(2);
-  const authViewModel = new AuthenticationViewModel();
+  const authViewModel = useAuthenticationViewModel();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    authViewModel.isAuthenticated.subscribe(setIsAuthenticated);
+    setIsAuthenticated(authViewModel.isAuthenticated);
   }, [authViewModel.isAuthenticated]);
 
   const handleChange = (event, newValue) => {
@@ -46,7 +45,7 @@ export default function HomePageView() {
           {selectedTab === 4 && <PackageView />}
         </React.Fragment>
       ) : (
-        <AuthenticationView authViewModel={authViewModel} />
+        <AuthenticationView />
       )}
     </Box>
   );

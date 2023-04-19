@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useAuth } from "./useAuth";
+import { auth } from "../firebase.js"; // Import the Firebase auth object from the firebase.js file
 import "./css/CreateAPostView.css";
 
 const CreatePostView = ({ onRequestClose, viewModel }) => {
-  const auth = useAuth();
   const currentUserId = auth.currentUser?.uid || "";
   const [postType, setPostType] = useState("Advertisement");
   const [title, setTitle] = useState("");
