@@ -1,5 +1,5 @@
 import React from "react";
-import "./CommentRow.css";
+import "./css/CommentRow.css";
 
 const CommentRow = ({ comment }) => {
   const formatDate = (timestamp) => {

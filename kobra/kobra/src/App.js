@@ -1,7 +1,9 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AuthenticationView from "./views/AuthenticationView";
-import { BrowserRouter as Router } from 'react-router-dom';
+import AuthenticationView from './views/AuthenticationView';
+import HomePageView from './views/HomePageView';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -14,11 +16,14 @@ const theme = createTheme({
 
 function App() {
   return (
-  <ThemeProvider theme={theme}>
-    <Router>
-      <AuthenticationView />
-    </Router>
-	</ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<AuthenticationView />} />
+          <Route path="/home" element={<HomePageView />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

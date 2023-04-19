@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { auth, firestore } from './firebase'; // Import firebase configurations
-import './AccountView.css';
+import { auth } from '../firebase.js'; // Import firebase configurations
+import './css/AccountView.css';
 
 const AccountView = () => {
   const [account, setAccount] = useState(null);

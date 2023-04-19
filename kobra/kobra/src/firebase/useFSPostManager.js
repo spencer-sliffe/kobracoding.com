@@ -10,9 +10,10 @@ import {
 import {
     getStorage,
     ref,
-    putString,
+    uploadString, // Changed from putString to uploadString
     getDownloadURL
 } from 'firebase/storage';
+
 
 class FSPostManager {
     constructor() {
@@ -29,11 +30,12 @@ class FSPostManager {
     }
 
     async uploadImage(imageDataUrl, postId) {
-        const storageRef = ref(this.storage, `post_images/${postId}.jpg`);
-        await putString(storageRef, imageDataUrl, 'data_url');
-        const imageUrl = await getDownloadURL(storageRef);
-        return imageUrl;
-    }
+    const storageRef = ref(this.storage, `post_images/${postId}.jpg`);
+    await uploadString(storageRef, imageDataUrl, 'data_url'); // Changed from putString to uploadString
+    const imageUrl = await getDownloadURL(storageRef);
+    return imageUrl;
+}
+
 
 	createPostFrom(data) {
 	    const id = data.id || '';
@@ -123,7 +125,7 @@ class FSPostManager {
 	        dislikes,
 	    };
 	}
-	
+
 
 	    async addPost(post) {
 	        try {
@@ -232,15 +234,15 @@ class FSPostManager {
 	        });
 
 	        return comments;
-	    } 
-    
+	    }
+
 
     async updatePost(post) {
         const postRef = doc(this.db, this.postsCollection, post.id);
         const postData = this.convertPostToData(post);
         await setDoc(postRef, postData);
     }
-	
+
     addPostWithImage(post, image, completion) {
         this.addPost(post, (result) => {
             if (result.success) {
@@ -403,4 +405,4 @@ class FSPostManager {
     // Add more functions as needed.
 }
 
-export const fsPostManager = new FSPostManager();
+export const useFSPostManager = new FSPostManager();

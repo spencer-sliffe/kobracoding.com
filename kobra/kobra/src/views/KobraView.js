@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useKobraViewModel } from "./useKobraViewModel";
+import { useKobraViewModel } from "../viewModels/useKobraViewModel";
 import PostRow from "./PostRow";
-import CreatePostModal from "./CreatePostModal";
-import "./KobraView.css";
+import { CreateAPostView } from "./CreateAPostView";
+import "./css/KobraView.css";
 
 const KobraView = () => {
   const [isPresentingCreatePostView, setIsPresentingCreatePostView] = useState(false);

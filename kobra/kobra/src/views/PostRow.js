@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import "./PostRow.css";
-import { Auth } from "firebase/auth";
+import "./css/PostRow.css";
+import { getAuth } from "firebase/auth";
 import AsyncImage from "./AsyncImage"; // Import the AsyncImage component if you have it in your project
 import CommentView from "./CommentView"; // Import the CommentView component if you have it in your project
 
 const PostRow = ({ post, viewModel }) => {
-  const currentUserId = Auth.currentUser?.uid || "";
+  const auth = getAuth();
+  const currentUserId = auth.currentUser?.uid || "";
   const [isLiked, setIsLiked] = useState(post.likingUsers.includes(currentUserId));
   const [likes, setLikes] = useState(post.likes);
   const [isDisliked, setIsDisliked] = useState(post.dislikingUsers.includes(currentUserId));
@@ -137,5 +138,6 @@ const PostRow = ({ post, viewModel }) => {
     )}
     </div>
   );
+};
 
-  export default PostRow;
+export default PostRow;

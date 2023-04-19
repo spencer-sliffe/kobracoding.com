@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Auth } from "firebase/auth";
+import { auth } from "../firebase.js";
 import CommentRow from "./CommentRow"; // Import the CommentRow component if you have it in your project
-import "./CommentView.css";
+import "./css/CommentView.css";
 
 const CommentView = ({ post, viewModel }) => {
   const [newCommentText, setNewCommentText] = useState("");
-  const currentUserId = Auth.currentUser?.uid || "";
+  const currentUserId = auth.currentUser?.uid || "";
 
   const addComment = () => {
     if (newCommentText.trim() !== "") {

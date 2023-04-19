@@ -1,5 +1,5 @@
 import React from "react";
-import { usePackageViewModel } from "./PackageViewModel";
+import { usePackageViewModel } from "../viewModels/usePackageViewModel";
 import PackageCell from "./PackageCell";
 
 const PackageView = () => {

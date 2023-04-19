@@ -1,13 +1,13 @@
 import { getFirestore, collection, query, orderBy, onSnapshot, addDoc, updateDoc, doc, serverTimestamp, getDocs, where } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-import { firebaseConfig } from "./firebaseConfig"; // Replace with your Firebase configuration import
+import { firebaseConfig } from "../firebase.js"; // Updated import path to use firebase.js
 
-class FirestoreManager {
+class FireStoreManager {
   constructor() {
     this.app = initializeApp(firebaseConfig);
     this.db = getFirestore(this.app);
   }
-
+  
   async fetchMessages(chatId, completion) {
     try {
       const messagesRef = collection(this.db, "chats", chatId, "messages");
@@ -95,7 +95,7 @@ class FirestoreManager {
       completion({ success: false, error });
     }
   }
-  
+
   observeUnreadMessageCount(chat, currentUserEmail, completion) {
     const messagesRef = collection(this.db, "chats", chat.id, "messages");
     const unreadMessagesQuery = query(

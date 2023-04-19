@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "./useAuth";
-import "./CreatePostView.css";
+import "./css/CreateAPostView.css";
 
 const CreatePostView = ({ onRequestClose, viewModel }) => {
   const auth = useAuth();
@@ -165,8 +165,8 @@ return (
       Post
     </button>
   </div>
-</div>
-);
+  </div>
+    );
+  };
 
-
-export default CreatePostView;
+  export default CreatePostView;

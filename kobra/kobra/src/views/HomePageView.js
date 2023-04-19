@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Navigation } from "@mui/material";
 import { Box, Tab, Tabs } from "@mui/material";
-import { AuthenticationView } from "./AuthenticationView";
-import { MarketPlaceView } from "./MarketPlaceView";
-import { AccountView } from "./AccountView";
-import { KobraView } from "./KobraView";
+import AuthenticationView from "./AuthenticationView";
+import MarketPlaceView from "./MarketPlaceView";
+import AccountView from "./AccountView";
+import KobraView from "./KobraView";
 import { InboxView } from "./InboxView";
-import { PackageView } from "./PackageView";
-import { AuthenticationViewModel } from "../viewModels/AuthenticationViewModel";
+import PackageView from "./PackageView";
+import AuthenticationViewModel from "../viewModels/AuthenticationViewModel";
 
-export function HomePageView() {
+
+export default function HomePageView() {
   const [selectedTab, setSelectedTab] = useState(2);
   const authViewModel = new AuthenticationViewModel();
   const [isAuthenticated, setIsAuthenticated] = useState(false);

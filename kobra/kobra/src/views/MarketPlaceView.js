@@ -1,5 +1,5 @@
 import React from 'react';
-import './MarketPlaceView.css';
+import './css/MarketPlaceView.css';
 
 const MarketPlaceView = () => {
   return (

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FirestoreManager } from "../services/FirestoreManager";
+import { FireStoreManager } from "../firebase/FireStoreManager";
 import { getAuth } from "firebase/auth";
 
 export function useInboxViewModel() {
