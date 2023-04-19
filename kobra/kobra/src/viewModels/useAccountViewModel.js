@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { auth, firestore } from './firebase'; // Import firebase configurations
-import './AccountView.css';
 
-const AccountView = () => {
+const useAccountViewModel = () => {
   const [account, setAccount] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [userPosts, setUserPosts] = useState([]);
 
   useEffect(() => {
     const fetchAccount = async () => {
@@ -24,7 +24,6 @@ const AccountView = () => {
           return;
         }
 
-        // Fetch account data and set account state
         const data = doc.data();
         const email = user.email || '';
         const subscription = data.subscription || false;
@@ -58,35 +57,9 @@ const AccountView = () => {
     fetchAccount();
   }, []);
 
-  const handleLogout = () => {
-    auth.signOut();
-  };
+  // You can add other functionality or state management as needed
 
-  return (
-    <div className="account-view">
-      {isLoading ? (
-        <div className="loading">Loading...</div>
-      ) : (
-        <>
-          {account && (
-            <div className="account-info">
-              <div className="email">{account.email}</div>
-              <div className="subscription">
-                {account.subscription ? 'Subscribed' : 'Not Subscribed'}
-              </div>
-              {account.packageData && (
-                <div className="package">
-                  <div className="package-name">{account.packageData.name}</div>
-                  <div className="package-price">${account.packageData.price}/month</div>
-                </div>
-              )}
-            </div>
-          )}
-          <button onClick={handleLogout}>Logout</button>
-        </>
-      )}
-    </div>
-  );
+  return { account, isLoading, userPosts };
 };
 
-export default AccountView;
+export default useAccountViewModel;

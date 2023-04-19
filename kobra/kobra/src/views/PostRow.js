@@ -16,15 +16,15 @@ const PostRow = ({ post, viewModel }) => {
   const getPosterName = () => {
     switch (post.type) {
       case "Advertisement":
-        return `Advertisement by ${post.poster}`;
+      return `Advertisement by ${post.poster}`;
       case "Help":
-        return `Help Request by ${post.poster}`;
+      return `Help Request by ${post.poster}`;
       case "News":
-        return `Article by ${post.poster}`;
+      return `Article by ${post.poster}`;
       case "Market":
-        return `Product by ${post.vendor}`;
+      return `Product by ${post.vendor}`;
       default:
-        return "";
+      return "";
     }
   };
 
@@ -57,30 +57,85 @@ const PostRow = ({ post, viewModel }) => {
 
   // Render post content based on its type
   const renderPostContent = () => {
-    // Add the necessary JSX structure and styles for different post types
+    switch (post.type) {
+      case "Advertisement":
+      return (
+        <div className="post-content advertisement">
+        <h3>{post.title}</h3>
+        <p>{post.description}</p>
+        <AsyncImage src={post.image} />
+        <p>{getPosterName()}</p>
+        </div>
+      );
+      case "Help":
+      return (
+        <div className="post-content help">
+        <h3>{post.title}</h3>
+        <p>{post.description}</p>
+        <p>{getPosterName()}</p>
+        </div>
+      );
+      case "News":
+      return (
+        <div className="post-content news">
+        <h3>{post.title}</h3>
+        <p>{post.description}</p>
+        <AsyncImage src={post.image} />
+        <p>{getPosterName()}</p>
+        </div>
+      );
+      case "Market":
+      return (
+        <div className="post-content market">
+        <h3>{post.title}</h3>
+        <p>{post.description}</p>
+        <AsyncImage src={post.image} />
+        <p>{getPosterName()}</p>
+        </div>
+      );
+      default:
+      return <div className="post-content unknown">Unknown Post Type</div>;
+    }
   };
+
 
   return (
     <div className="post-row">
-      {/* Render the post content */}
-      {renderPostContent()}
+    {/* Render the post content */}
+    {renderPostContent()}
 
-      {/* Render like, dislike, comment, and delete buttons */}
-      {/* Add the necessary JSX structure and styles for the buttons */}
+    {/* Render like, dislike, comment, and delete buttons */}
+    <div className="actions">
+    <button className={`like-btn ${isLiked ? "liked" : ""}`} onClick={handleLike}>
+    {isLiked ? "❤️" : "♡"} {likes}
+    </button>
+    <button className={`dislike-btn ${isDisliked ? "disliked" : ""}`} onClick={handleDislike}>
+    {isDisliked ? "👎" : "👍"} {dislikes}
+    </button>
+    <button className="comment-btn" onClick={() => setShowingComments(!showingComments)}>
+    💬 Comment
+    </button>
+    <button className="delete-btn" onClick={() => setShowingDeleteAlert(true)}>
+    🗑️ Delete
+    </button>
+    </div>
 
-      {/* Render the CommentView component when showingComments is true */}
-      {showingComments && <CommentView post={post} />}
+    {/* Render the CommentView component when showingComments is true */}
+    {showingComments && <CommentView post={post} />}
 
-      {/* Render the delete alert when showingDeleteAlert is true */}
-      {showingDeleteAlert && (
-        <div>
-          {/* Add the necessary JSX structure and styles for the delete alert */}
-          <button onClick={handleDelete}>Delete</button>
-          <button onClick={() => setShowingDeleteAlert(false)}>Cancel</button>
-        </div>
-      )}
+    {/* Render the delete alert when showingDeleteAlert is true */}
+    {showingDeleteAlert && (
+      <div className="delete-alert">
+      <p>Are you sure you want to delete this post?</p>
+      <button className="delete-confirm-btn" onClick={handleDelete}>
+      Delete
+      </button>
+      <button className="delete-cancel-btn" onClick={() => setShowingDeleteAlert(false)}>
+      Cancel
+      </button>
+      </div>
+    )}
     </div>
   );
-};
 
-export default PostRow;
+  export default PostRow;

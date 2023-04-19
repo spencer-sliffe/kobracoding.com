@@ -22,8 +22,30 @@ const KobraView = () => {
 
   return (
     <div className="kobra-view">
-      {/* Render the header, post rows, and toolbar here */}
-      <CreatePostModal isOpen={isPresentingCreatePostView} viewModel={viewModel} onRequestClose={() => setIsPresentingCreatePostView(false)} />
+      <header className="kobra-header">
+        <h1>Kobra</h1>
+        <button onClick={() => setIsPresentingCreatePostView(true)}>Create Post</button>
+      </header>
+
+      <nav className="feed-selector">
+        {["Advertisement", "Help", "News", "Market"].map((type) => (
+          <button key={type} onClick={() => setSelectedFeed(type)} className={selectedFeed === type ? "selected" : ""}>
+            {type}
+          </button>
+        ))}
+      </nav>
+
+      <div className="post-container">
+        {filteredPosts.map((post) => (
+          <PostRow key={post.id} post={post} viewModel={viewModel} />
+        ))}
+      </div>
+
+      <CreatePostModal
+        isOpen={isPresentingCreatePostView}
+        viewModel={viewModel}
+        onRequestClose={() => setIsPresentingCreatePostView(false)}
+      />
     </div>
   );
 };
