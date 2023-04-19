@@ -35,5 +35,20 @@ kobra
     ├── viewModels
     │   ├── AccountViewModel.js
     │   └── AthenticationViewModel.js
+	│	└── useInboxViewModel.js
+	│	└── KobraViewModel.js
+	│	└── ChatViewModel.js
+	│	└── PackageViewModel.js
     └── views
         └── AuthenticationView.js
+		└── AccountView.js
+		└── ChatCell.js
+		└── HomePageView.js
+	 	└── InboxView.js
+		└── SearchBar.js
+		└── PackageView.js
+		└── ChatView.js
+		└── ChatRow.js
+		└── CommentView.js
+		└── CreatePostView.js
+		└── KobraView.js

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useInboxViewModel } from "../viewModels/InboxViewModel";
+import { useInboxViewModel } from "../viewModels/useInboxViewModel";
 import { ChatView } from "./ChatView";
 import { ChatCell } from "./ChatCell";
 import { SearchBar } from "./SearchBar";
