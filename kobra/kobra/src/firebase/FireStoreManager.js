@@ -1,13 +1,11 @@
-import { getFirestore, collection, query, orderBy, onSnapshot, addDoc, updateDoc, doc, serverTimestamp, getDocs, where } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
-import { firebaseConfig } from "../firebase.js"; // Updated import path to use firebase.js
+import { getFirestore, collection, query, orderBy, onSnapshot, addDoc, updateDoc, doc, serverTimestamp, getDocs, where, setDoc } from "firebase/firestore";
+import { db, storage } from "../firebase"; // Import Firestore and Storage constants from firebase.js
 
-class FireStoreManager {
+export class FireStoreManager {
   constructor() {
-    this.app = initializeApp(firebaseConfig);
-    this.db = getFirestore(this.app);
+    this.db = db; // Use the imported Firestore constant
   }
-  
+
   async fetchMessages(chatId, completion) {
     try {
       const messagesRef = collection(this.db, "chats", chatId, "messages");

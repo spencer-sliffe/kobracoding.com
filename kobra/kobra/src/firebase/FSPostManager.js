@@ -12,16 +12,17 @@ import {
 import {
     getStorage,
     ref,
-    uploadString, // Changed from putString to uploadString
+    uploadString,
     getDownloadURL
 } from 'firebase/storage';
 
-
+// Import the 'app' instance from your 'firebase.js' file
+import { app } from '../firebase';
 
 class FSPostManager {
     constructor() {
-        this.db = getFirestore();
-        this.storage = getStorage();
+        this.db = getFirestore(app);
+        this.storage = getStorage(app);
         this.postsCollection = 'Posts';
     }
 
@@ -34,11 +35,10 @@ class FSPostManager {
 
     async uploadImage(imageDataUrl, postId) {
         const storageRef = ref(this.storage, `post_images/${postId}.jpg`);
-        await uploadString(storageRef, imageDataUrl, 'data_url'); // Changed from putString to uploadString
+        await uploadString(storageRef, imageDataUrl, 'data_url');
         const imageUrl = await getDownloadURL(storageRef);
         return imageUrl;
     }
-
 
     createPostFrom(data) {
         const id = data.id || '';

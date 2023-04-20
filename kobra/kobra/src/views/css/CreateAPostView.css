@@ -1,0 +1,52 @@
+.create-a-post-view {
+  background: linear-gradient(to bottom right, black, blue);
+  min-height: 100%;
+  padding: 20px;
+}
+
+.create-a-post-view input,
+.create-a-post-view textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 16px;
+}
+
+.create-a-post-view select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 16px;
+}
+
+.create-a-post-view button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: blue;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.create-a-post-view button:hover {
+  background-color: darkblue;
+}
+
+.create-a-post-view img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  margin-top: 10px;
+}

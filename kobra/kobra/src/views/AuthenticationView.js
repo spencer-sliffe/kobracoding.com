@@ -58,7 +58,7 @@ function AuthenticationView() {
   };
   return (
     <StyledContainer maxWidth="sm">
-      <StyledLogo src="kobracoding-logo.png" alt="KobraCoding Logo" />
+      <StyledLogo src="./assets/kobracoding-logo.png" alt="KobraCoding Logo" />
       <Paper elevation={3} square>
         <Box display="flex" flexDirection="row">
           <Button onClick={() => setSelection(0)} variant={selection === 0 ? "contained" : "outlined"}>

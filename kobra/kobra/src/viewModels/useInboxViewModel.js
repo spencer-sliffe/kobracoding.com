@@ -7,7 +7,7 @@ export function useInboxViewModel() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
   const [unreadMessageCounts, setUnreadMessageCounts] = useState({});
-  const firestoreManager = new FirestoreManager();
+  const firestoreManager = new FireStoreManager();
   const auth = getAuth();
   const currentUserEmail = auth.currentUser?.email || "";
 

@@ -2,7 +2,7 @@ import {
     useState,
     useEffect
 } from "react";
-import FSPostManager from "../firebase/useFSPostManager";
+import FSPostManager from "../firebase/FSPostManager";
 
 export function useKobraViewModel() {
     const [posts, setPosts] = useState([]);

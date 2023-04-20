@@ -1,0 +1,71 @@
+.post-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.post-content h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.post-content p {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.like-btn,
+.dislike-btn,
+.comment-btn,
+.delete-btn {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.like-btn.liked {
+  color: red;
+}
+
+.dislike-btn.disliked {
+  color: red;
+}
+
+.delete-alert {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.delete-confirm-btn,
+.delete-cancel-btn {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.delete-confirm-btn {
+  color: red;
+}
