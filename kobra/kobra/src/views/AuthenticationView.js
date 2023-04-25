@@ -3,6 +3,7 @@ import { TextField, Button, Container, Box, Paper, Typography, LinearProgress } 
 import { styled } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 import { useAuthenticationViewModel } from "../viewModels/useAuthenticationViewModel";
+import BetaKobra2 from "./assets/BetaKobra2.png";
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   display: "flex",
@@ -13,7 +14,7 @@ const StyledContainer = styled(Container)(({ theme }) => ({
 }));
 
 const StyledLogo = styled("img")(({ theme }) => ({
-  width: "100%",
+  width: "50%",
   height: "auto",
   maxHeight: "25%",
   marginTop: "13%",
@@ -58,7 +59,7 @@ function AuthenticationView() {
   };
   return (
     <StyledContainer maxWidth="sm">
-      <StyledLogo src="./assets/kobracoding-logo.png" alt="KobraCoding Logo" />
+      <StyledLogo src={BetaKobra2} alt="KobraCoding Logo" />
       <Paper elevation={3} square>
         <Box display="flex" flexDirection="row">
           <Button onClick={() => setSelection(0)} variant={selection === 0 ? "contained" : "outlined"}>

@@ -8,11 +8,6 @@ export function useKobraViewModel() {
     const [posts, setPosts] = useState([]);
     const [comments, setComments] = useState([]);
     const postManager = new FSPostManager();
-
-    useEffect(() => {
-        fetchPosts();
-    }, []);
-
     const fetchPosts = async () => {
         try {
             const fetchedPosts = await postManager.fetchPosts();
@@ -21,6 +16,13 @@ export function useKobraViewModel() {
             console.error("Error fetching posts:", error);
         }
     };
+
+    useEffect(() => {
+    fetchPosts();
+}, [fetchPosts]);
+
+
+
 
     // ...
     const addPost = async (post, image, completion) => {

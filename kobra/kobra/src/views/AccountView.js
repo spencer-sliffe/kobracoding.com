@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { auth } from '../firebase.js'; // Import firebase configurations
 import './css/AccountView.css';
+import { auth, db } from '../firebase.js';
 
 const AccountView = () => {
   const [account, setAccount] = useState(null);
@@ -26,7 +26,7 @@ const AccountView = () => {
 
         // Fetch account data and set account state
         const data = doc.data();
-        const email = user.email || '';
+        const email = user.email || 'test1@gmail.com';
         const subscription = data.subscription || false;
         const accountData = { id: user.uid, email, subscription, packageData: null, profilePicture: null };
 

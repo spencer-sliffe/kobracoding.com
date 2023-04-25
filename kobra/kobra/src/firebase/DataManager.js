@@ -6,25 +6,26 @@ class DataManager {
         this.packages = [];
         this.fetchPackages();
     }
-    
+
     async fetchPackages() {
         this.packages = [];
         const db = Firestore;
         const ref = collection(db, "Packages");
 
         try {
-            const snapshot = await getDocs(ref);
-            snapshot.forEach((docSnapshot) => {
-                const data = docSnapshot.data();
-                const id = data.id || "";
-                const name = data.name || "";
-                const price = data.price || 0.0;
-                const packageObj = new Package(id, name, price);
-                this.packages.push(packageObj);
-            });
-        } catch (error) {
-            console.error(error.message);
-        }
+  const snapshot = await getDocs(ref);
+  snapshot.forEach((docSnapshot) => {
+    const data = docSnapshot.data();
+    const id = data.id || "";
+    const name = data.name || "";
+    const price = data.price || 0.0;
+    const packageObj = new Package(id, name, price);
+    this.packages.push(packageObj);
+  });
+} catch (error) {
+  console.error("Error fetching packages:", error.message);
+}
+
     }
 }
 
